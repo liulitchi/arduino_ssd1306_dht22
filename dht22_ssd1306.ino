@@ -59,7 +59,9 @@ void loop() {
     display.setCursor(0, 0);
     display.print("Temp  Humi");
 
-    display.setCursor(64, 28);
+    display.drawRect(68, 28, 3, 3, WHITE); // Put degree symbol ( ° )
+
+    display.setCursor(76, 28);
     display.print("C");
 
     display.setCursor(112, 48);
