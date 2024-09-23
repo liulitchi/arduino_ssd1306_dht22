@@ -7,7 +7,7 @@
 
 ## ssd1306
 ```
-Vcc -> 5V
+VCC -> 5V
 GND -> GND
 SCL -> A5
 SDA -> A4
@@ -15,7 +15,7 @@ SDA -> A4
 ## DHT22
 ```
 +   -> 5v
-out -> 2
+out -> D2
 -   -> GND
 ```
 # 其他
