@@ -75,7 +75,7 @@ void loop() {
 
     display.setCursor(64, 48);
     display.print(hi);  
-    /*//display.drawRect(68, 28, 3, 3, WHITE); // Put degree symbol ( ° )
+    //display.drawRect(68, 28, 3, 3, WHITE); // Put degree symbol ( ° )
 
     display.display();
 
