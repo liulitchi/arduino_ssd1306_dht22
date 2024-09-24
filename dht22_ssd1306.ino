@@ -49,29 +49,33 @@ void loop() {
     // Check if any reads failed and exit early (to try again).
     if (isnan(h) || isnan(t)) {
         //display.println(F("Failed to read from DHT sensor!"));
-        return -1;
+        return;
     }
 
+    // Compute heat index in Celsius 
+    float hi = dht.computeHeatIndex(t, h);
 
     display.setTextColor(WHITE);
     display.setTextSize(2);
 
     display.setCursor(0, 0);
-    display.print("Temp  Humi");
+    display.print("Temp:");
 
-    display.drawRect(68, 28, 3, 3, WHITE); // Put degree symbol ( ° )
-
-    display.setCursor(76, 28);
-    display.print("C");
-
-    display.setCursor(112, 48);
-    display.print("%");
-
-    display.setCursor(0, 28);
+    display.setCursor(64, 0);
     display.print(t);
 
-    display.setCursor(46, 48);
-    display.print(h);
+    display.setCursor(0, 28);
+    display.print("Humi:");
+
+    display.setCursor(64, 28);
+    display.print(h);  
+
+    display.setCursor(0, 48);
+    display.print("HtIn:");
+
+    display.setCursor(64, 48);
+    display.print(hi);  
+    /*//display.drawRect(68, 28, 3, 3, WHITE); // Put degree symbol ( ° )
 
     display.display();
 
