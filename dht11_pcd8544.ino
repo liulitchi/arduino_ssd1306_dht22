@@ -29,7 +29,7 @@ void setup() {
 
     dht.begin();
     display.begin();
-    display.setContrast(56); // 显示器对比度,50~60之间最佳
+    display.setContrast(56); // 显示屏对比度,50~60之间最佳
     display.clearDisplay();
 
 }
